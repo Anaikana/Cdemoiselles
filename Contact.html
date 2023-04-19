@@ -1,15 +1,58 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortccut icon" href="Logo-pro-cdemoiselles.ico" type="image/png">
-    <title>Contact</title>
-</head>
-<body>
-    <nav>
-        <a href="">Accueil </a><a href="">À propos</a><a href="">Services</a><a href="Contact.html"class="active">Contact</a>
-    </nav>
-</body>
-</html>
+
+
+<header class="header__page">
+    <div class="bg">
+        <h1>Une question ? N'hésitez pas à me contacter ! &#128140</h1>
+    </div>
+</header>
+<main> <!--Ici on mettra le formulaire de contact-->
+    <div class="container">
+        <h2 class="form-title">Sortez votre plus belle plume ..</h2>
+        <form action="#" method="post">
+            <div class="row row-cols-1 row-cols-md-2">
+                <div class="col mb-3">
+                    <label for="name">Nom :</label>
+                    <input class="form-control mt-3 mb-2" id="name" name="name" type="text" required>
+                </div>
+                <div class="col mb-3">
+                    <label for="prenom">Prénom :</label>
+                    <input class="form-control mt-3 mb-2" id="prenom" name="prenom" type="text" required>
+                </div>
+                <div class="col mb-3">
+                    <label for="email">Email :</label>
+                    <input class="form-control mt-3 mb-2" id="email" name="email" type="email" required>
+                </div>
+                <div class="col mb-3">
+                    <label for="telephone">Téléphone :</label>
+                    <input class="form-control mt-3 mb-2" id="telephone" name="telephone" type="tel" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col mb-3">
+                    <label for="objet">Objet :</label>
+                    <input class="form-control mt-3 mb-2" id="objet" name="objet" type="text" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mb-3">
+                    <div class="col mb-3">
+                        <label for="message">Quel est votre message ?</label>
+                        <textarea class="form-control mt-3 mb-2" name="message" id="message" rows="5"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="submit">
+                <div class="submit__acceptrgpd">
+                    <input type="checkbox" name="rgpd" id="rgpd">
+                    <label for="rgpd"><i>J'ai lu et j'accepte <a href="/mentions-legales.php">la
+                                charte de
+                                confidentialité</a></i></label>
+                </div>
+                <div class="submit__btn">
+                    <input type="submit" value="Envoyer le formulaire">
+                </div>
+            </div>
+        </form>
+    </div>
+</main
