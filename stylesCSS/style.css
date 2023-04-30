@@ -6,7 +6,6 @@
 
 html,
 body,
-div,
 span,
 object,
 iframe,
@@ -69,6 +68,8 @@ summary,
 time,
 mark,
 audio,
+section,
+body,
 video 
 {
 font-family: 'Playfair Display', serif;
@@ -84,41 +85,20 @@ header
 {
   background-color: #8C165D;
   position: sticky;
-  height:200px;
+  height:150px;
   padding: 0;
-}
-
-/* Color of the links BEFORE scroll */
-.navbar-scroll .nav-link,
-.navbar-scroll .navbar-toggler-icon,
-.navbar-scroll .navbar-brand {
-  color: black;
-}
-
-/* Color of the links AFTER scroll */
-.navbar-scrolled .nav-link,
-.navbar-scrolled .navbar-toggler-icon,
-.navbar-scrolled .navbar-brand {
-  color: blueviolet;
-}
-
-/* Color of the navbar AFTER scroll */
-.navbar-scroll,
-.navbar-scrolled {
-  background-color: #cbbcb1;
 }
 
 .mask-custom {
   filter: drop-shadow(0 0 0.75rem #fffcf9);
   background-color: rgba(255, 255, 255, .15);
   position: sticky;
-  
 }
 
 .navbar-brand {
   font-size: 1.75rem;
   letter-spacing: 3px;
-  height: 200px;
+  height: 50px;
   margin: 0;
   padding: 0;
   border: 0;
@@ -126,8 +106,9 @@ header
   vertical-align: text-top;
   color: #000;
   position: sticky;
-
 }
+
+
 
 .priserdv 
 {
@@ -153,15 +134,14 @@ header
 }
 
 
-blockquote {
-  margin: 0;
-}
-
 blockquote p {
   padding: 15px;
   background: #eee;
   border-radius: 5px;
   width:fit-content;
+  text-align: left;
+  box-decoration-break: slice;
+  display: inline-block;
 }
 
 blockquote p::before {
@@ -172,31 +152,70 @@ blockquote p::after {
   content: '\201D';
 }
 
-
-.portrait1, .portrait2, .portrait3, .portrait4 
+.portrait3
 {
   box-sizing: content-box;
   display: inline-flex;
+  border: 2px #fffcf9;
 }
 
-footer 
-{
-  height:120px;
-  background-color: #b1ede8;
-  color: black;
-  font-style: normal;
- font-variant: small-caps;
- font-size:small;
- text-align:left;
- padding: 0.5px;
- word-spacing: normal;
-}
 
-label {
-  font-family: sans-serif;
-  font-size: 1rem;
-  padding-right: 10px;
-}
+  
+  .footer{
+  background:#000;
+  padding:30px 0px;
+  font-family: 'Playfair Display', sans-serif;
+  text-align:center;
+  }
+  
+  .footer .row{
+  width:100%;
+  margin:1% 0%;
+  padding:0.6% 0%;
+  color:gray;
+  font-size:0.8em;
+  }
+  
+  .footer .row a{
+  text-decoration:none;
+  color:gray;
+  transition:0.5s;
+  }
+  
+  .footer .row a:hover{
+  color:#fff;
+  }
+  
+  .footer .row ul{
+  width:100%;
+  }
+  
+  .footer .row ul li{
+  display:inline-block;
+  margin:0px 30px;
+  }
+  
+  .footer .row a i{
+  font-size:2em;
+  margin:0% 1%;
+  }
+  
+  @media (max-width:720px){
+  .footer{
+  text-align:left;
+  padding:5%;
+  }
+  .footer .row ul li{
+  display:block;
+  margin:10px 0px;
+  text-align:left;
+  }
+  .footer .row a i{
+  margin:0% 3%;
+  }
+  }
+
+
 
 select {
   font-size: 0.9rem;
@@ -210,10 +229,12 @@ iframe {
 
 img 
 {
-width: 200px;
-height: auto;
-box-sizing: content-box;
-padding: 2px;
+box-sizing:border-box;
+padding: 0;
+width: 150px;
+height: 600px;
+object-fit: cover;
+object-position: 100% 0;
 }
 
 .card-img-top, .col, .card-body, .card-title, .card,.card-text
@@ -240,18 +261,26 @@ height: fit-content;
 position: relative;
 overflow: hidden;
 cursor: pointer;
-outline: 2px groove #f45b69;
+outline: 2px groove #a63760;
 border-radius: 2rem;
 flex-direction: row-reverse;
+border: #000;
+word-spacing: normal;
 }
 
+#descriptif {
+  width: 1200px;
+  height: 300px;
+  text-align: justify;
+  padding: 10px 50px 20px;
+}
 
-section :hover div 
+/*section :hover div effet recherché : cf cours du 28 mars 
 {
 top: 0;
 }
 
-*div
+/*div
 {
 font-family: 'Playfair Display', serif;
 width: 300px;
@@ -261,17 +290,9 @@ box-sizing: border-box;
 left: 0;
 top: 300px;
 transition: all 0.5s ease;
-}
+}*/
 
-img
-{
-width: 300px;
-height: 300px;
-display: block;
-border-radius: 8px;
-}
-
-#silhouette,#cocooning, #lookcomplet, #diagnosticcolo, #diagnosticstyle, #diagnosticmorpho, #fashiondétox, #Shopping
+#silhouette,#cocooning, #lookcomplet, #diagnosticcolo, #diagnosticstyle, #diagnosticmorpho, #fashiondetox, #shopping
 {
 width :300px;
 height:300px;
@@ -285,21 +306,37 @@ font-style:normal;
 display:flex;
 }
 
+figure {
+  float: right;
+  width: 30%;
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+  border: thin silver solid;
+  margin: 0;
+  padding: 0;
+}
+img.scaled {
+  width: 100%;
+}
 
+/*Formulaire de contact */
+#formulairedecontact {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #a63760;
+  border-radius: 10px;
+  width: 1200px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+label {
+  font-family: "Playfair Display";
+  font-size: 1rem;
+  padding-right: 10px;
+  display: block;
+  margin-bottom: 10px;
+}
 
 
 
